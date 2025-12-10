@@ -1,0 +1,40 @@
+/* CSS reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  background-color: #143f6b;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the piano to use flex box */
+.piano {
+  display: flex;
+}
+
+.key {
+  height: calc(var(--width) * 4);  
+  width: var(--width);             
+}
+
+.white {
+  --width: 100px;  
+  background-color: white;
+  border: 1px solid #333;
+}
+
+.black {
+  --width: 60px;   
+  background-color: black;
+  margin-left: calc(var(--width) / -2);   
+  margin-right: calc(var(--width) / -2);  
+  z-index: 2;
+}
